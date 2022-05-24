@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DBDBD2;
+}
+
+.striped {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom , #009688 50%,  #DBDBD2 50%);
+ }
