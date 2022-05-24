@@ -7,12 +7,12 @@
 body{
     background-color: #DBDBD2;
     height: 100vh;
-    
 }
 
 .main-container{
-    height: 95%;
-    background-color: red;
+    height: 90%;
+    padding: 20px;
+    display: flex;
     width: 1440px;
     margin: auto;
 
@@ -20,19 +20,26 @@ body{
 .container-left{
     width: 40%;
     background-color: #eaeaea;
-    
+    border-right: 0.5px solid grey;
 }
 
 .container-right{
     width: 60%;
-    background-color: rebeccapurple;
+    background-color: #eaeaea;
+    background-image: url(img/mine.jpg);
+
 }
 
-.header-container-left{
+.header-container-left, .header-container-right{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    height: 70px;
+}
+
+.header-container-right{
+    background-color: #eaeaea;
 }
 .my-user{
     display: flex;
@@ -99,7 +106,68 @@ padding: 5px;
 }
 
 .chat-list-container{
+    overflow: hidden;
     overflow-y: auto;
 }
 
+.emoji, .microphone{
+    padding:20px;
+    font-size: 25px;
+}
 
+.footer-input{
+    height: 70px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-message{
+    height:calc(100% - 190px);
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.message-input{
+    width: 80%;
+}
+
+#input-text{
+    width: 100%;
+    padding: 10px;
+}
+
+.text-send{
+    padding: 15px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    margin-bottom: 8px; 
+}
+
+.container-text-send{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text-received{
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    margin-right: 80px;
+    margin-bottom: 8px; 
+}
+
+.container-text-received{
+    display: flex;
+    justify-content: flex-start;
+}
