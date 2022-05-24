@@ -11,10 +11,9 @@
 </head>
 <body>
         <!-- contenitore principale di tutto la nostra app  -->
-        <div id="app" class="main-container">
+        <div id="app" class="main-container" >
             <!-- contenitore di sinistra  -->
             <div class="container-left">
-
                 <!-- header contenitore di sinistra -->
                 <div class="header-container-left">
                     <div class="my-user">
@@ -35,7 +34,7 @@
                         <i class="fa-solid fa-bell-slash"></i>
                     </button>
                     <div class="choice-silense">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos illo similique recusandae, perferendis quaerat minus aut quod suscipit ducimus tenetur esse pariatur minima maxime officia fuga soluta? Temporibus, exercitationem repellat.</p>
+                        <p>Attiva Notifiche a desktop</p>
                     </div>
                 </div>
                 <!-- /contenitore notifiche container sinistro  -->
@@ -45,109 +44,11 @@
                     <input type="text" id="search" placeholder="cerca o inizia una nuova chat">
                 </div>
                 <div class="chat-list-container">
-                    <div class="chat-list">
+                    <div class="chat-list" v-for="contact in contacts">
                         <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
+                            <img class="user-image" :src=" `img/avatar${contact.avatar}.jpg`" alt="">
                             <div class="name-person">
-                                <span class="name">Sofia</span>
-                                <div class="last-message">
-                                    <p>ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="chat-list">
-                        <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
-                            <div class="name-person">
-                                <span class="name">Sofia</span>
-                                <div class="last-message">
-                                    <p>ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="chat-list">
-                        <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
-                            <div class="name-person">
-                                <span class="name">Sofia</span>
-                                <div class="last-message">
-                                    <p>ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="chat-list">
-                        <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
-                            <div class="name-person">
-                                <span class="name">Sofia</span>
-                                <div class="last-message">
-                                    <p>ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="chat-list">
-                        <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
-                            <div class="name-person">
-                                <span class="name">Sofia</span>
-                                <div class="last-message">
-                                    <p>ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="chat-list">
-                        <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
-                            <div class="name-person">
-                                <span class="name">Sofia</span>
-                                <div class="last-message">
-                                    <p>ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="chat-list">
-                        <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
-                            <div class="name-person">
-                                <span class="name">Sofia</span>
-                                <div class="last-message">
-                                    <p>ultimo messaggio inviato</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                    <div class="chat-list">
-                        <div class="person">
-                            <img class="user-image" src="img/avatar_1.jpg" alt="">
-                            <div class="name-person">
-                                <span class="name">Sofia</span>
+                                <span class="name">{{contact.name}}</span>
                                 <div class="last-message">
                                     <p>ultimo messaggio inviato</p>
                                 </div>
@@ -186,16 +87,26 @@
                     <div class="container-text-send">
                         <div class="text-send">
                             <p>hai portato a spasso il cane?</p>
+                            <div class="time-send">
+                                <small>15:30</small>
+                            </div>
                         </div>
+                        
                     </div>
                     <div class="container-text-send">
                         <div class="text-send">
                             <p>hai portato a spasso il cane?</p>
+                            <div class="time-send">
+                                <small>15:30</small>
+                            </div>
                         </div>
                     </div>
                     <div class=" container-text-received">
                         <div class="text-received">
                             <p>hai portato a spasso il cane?</p>
+                            <div class="time-send">
+                                <small>16:30</small>
+                            </div>
                         </div>
                     </div>
                 </div>
