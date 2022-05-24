@@ -6,51 +6,100 @@
 
 body{
     background-color: #DBDBD2;
+    height: 100vh;
+    
 }
 
-.striped {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(to bottom , #009688 50%,  #DBDBD2 50%);
- }
+.main-container{
+    height: 95%;
+    background-color: red;
+    width: 1440px;
+    margin: auto;
 
- .principal-container{
-     padding: 20px 0px;
-     width: 1400px;
-     margin: auto;
-     display: flex;
- }
- .user{
-     display: flex;
-     align-items: center;
- }
-
- aside{
-     padding: 0px 15px;
-     display: flex;
-     align-items: center;
-     width: 40%;
-     background-color: yellow;
- }
- .aside-left, .aside-right{
-     width: 50%;
- }
- .aside-right{
-     text-align: right;
- }
-
- main{
-     width: 60%;
-     background-color: red;
+}
+.container-left{
+    width: 40%;
+    background-color: #eaeaea;
     
- }
+}
 
- .image-user{
-     width: 50px;
-     margin-right: 10px;
-     border-radius: 50%;
- }
+.container-right{
+    width: 60%;
+    background-color: rebeccapurple;
+}
 
- .aside-icon i{
-     margin-right: 10px;
- }
+.header-container-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.my-user{
+    display: flex;
+    align-items: center;
+}
+.user-image{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.aside-icon i{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.settings-notify{
+    display: flex;
+    width: 100%;
+    background-color: #8edafc;
+    align-items: center;
+    padding: 10px;
+}
+
+.icon-silece{
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+}
+
+.search-chat{
+display: flex;
+justify-content: center;
+height: 40px;
+padding: 5px;
+}
+
+.lens{
+    width: 10%;
+    border: none;
+}
+
+#search{
+    width: 90%;
+    border: none;
+}
+
+.chat-list{
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.name-person{
+    margin-left: 20px;
+}
+.person{
+    display: flex;
+}
+.chat-list{
+    background-color: white;
+    border: 0.5px solid #eaeaea;
+}
+
+.chat-list-container{
+    overflow-y: auto;
+}
+
+
