@@ -84,17 +84,9 @@
                     <!-- /icone header destro  -->
                 </div>
                 <div class="container-message">
-                    <div class="container-text-send">
-                        <div class="text-send" v-for="(contact,index) in contacts[activeContact].messages">
+                    <div class="container-row" v-for="(contact,index) in contacts[activeContact].messages">
+                        <div class="text-send">
                             <p>{{contact.message}}</p>
-                            <div class="time-send">
-                                <small>15:30</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-text-received">
-                        <div class="text-received">
-                            <p></p>
                             <div class="time-send">
                                 <small>15:30</small>
                             </div>
