@@ -126,9 +126,8 @@ padding: 5px;
 .container-message{
     display: flex;
     flex-direction: column;
-    height:calc(100% - 190px);
+    height:calc(100% - 140px);
     width: 100%;
-    margin-top: 50px;
     padding: 50px;
     overflow: auto;
 }
@@ -142,43 +141,15 @@ padding: 5px;
     padding: 10px;
 }
 
-.text-send{
-    padding: 10px;
-    background-color: aquamarine;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 40%;
-    margin-bottom: 8px; 
-}
 
-.container-row{
-    width: 100%;
-    display: flex;
-}
-
-.container-row-send{
-    justify-content: flex-end;
-}
-
-.container-row-received{
-    justify-content: flex-start;
-}
-
-.text-received{
-    padding: 15px;
+.sent-message{
+    align-self: flex-end;
+    background-color: greenyellow;
+} 
+.received-message{
     background-color: white;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 40%;
-    margin-right: 80px;
-    margin-bottom: 8px; 
+    align-self: flex-start;
 }
-
-
 
 .time-send{
     color: grey;
@@ -187,4 +158,14 @@ padding: 5px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+}
+
+.container-row{
+    width: 30%;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -84,12 +84,10 @@
                     <!-- /icone header destro  -->
                 </div>
                 <div class="container-message">
-                    <div class="container-row" v-for="(contact,index) in contacts[activeContact].messages">
-                        <div class="text-send">
-                            <p>{{contact.message}}</p>
-                            <div class="time-send">
-                                <small>15:30</small>
-                            </div>
+                    <div class="container-row" v-for="(contact,index) in contacts[activeContact].messages" :class="{'sent-message': contact.status == 'sent', 'received-message': contact.status == 'received'}">
+                        <div class="text">{{contact.message }}</div> 
+                        <div class="time-send">
+                            <small>16:15</small>
                         </div>
                     </div>
                 </div>
@@ -99,9 +97,9 @@
                     <div class="emoji">
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
-                    <div class="message-input">
-                        <input type="text" id="input-text" placeholder="Scrivi un messaggio">
-                    </div>
+                    <form class="message-input" @submit.prevent="addNewMessage()">
+                        <input type="text" id="input-text" placeholder="Scrivi un messaggio" v-model="newMessage">
+                    </form>
                     <div class="microphone">
                         <div class="icon-microphone">
                             <i class="fa-solid fa-microphone"></i>

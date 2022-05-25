@@ -164,11 +164,13 @@ const app= new Vue({
                 }
             ],
         },],
+        newMessage:""
     },
 
     methods:{
         selectContact(index){
             this.activeContact=index;
     },
+
 },
 });
