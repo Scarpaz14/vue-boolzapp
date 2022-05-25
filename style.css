@@ -9,12 +9,13 @@ body{
     height: 100vh;
 }
 
-.main-container{
+.app-container{
     height: 90%;
     padding: 20px;
     display: flex;
     width: 1440px;
     margin: auto;
+    overflow: hidden;
     
 }
 .container-left{
@@ -104,12 +105,10 @@ padding: 5px;
 .chat-list{
     background-color: white;
     border: 0.5px solid #eaeaea;
-    overflow: auto;
+    overflow-y: auto;
 }
 
-.chat-list-container{
-    overflow: auto;
-}
+
 
 .emoji, .microphone{
     padding:20px;
