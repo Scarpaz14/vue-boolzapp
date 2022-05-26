@@ -164,13 +164,36 @@ const app= new Vue({
                 }
             ],
         },],
-        newMessage:""
+        newMessage:{
+            date: '10/01/2020 15:30:55',
+            message: '',
+            status: 'sent'
+        },
+        botMessage:{
+            date: '10/01/2020 15:30:55',
+            message: 'ok capo',
+            status: 'received'
+        },
     },
 
     methods:{
         selectContact(index){
             this.activeContact=index;
-    },
+        },
 
-},
+        addNewMessage(){
+        if(this.newMessage !== ' '){
+            this.contacts[this.activeContact].messages.push(this.newMessage);
+            this.newMessage = ' ',
+            setTimeout(this.botNewMessage,2000)
+        }
+        },
+        botNewMessage(){
+            this.contacts[this.activeContact].messages.push(this.botMessage)
+        }
+        
+   
+    
+
+    },
 });
