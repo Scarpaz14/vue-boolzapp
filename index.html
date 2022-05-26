@@ -41,10 +41,10 @@
                 <!-- contenitore ricerca chat  -->
                 <div class="search-chat">
                     <button class="lens"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" id="search" placeholder="cerca o inizia una nuova chat">
+                    <input type="text" id="search" placeholder="cerca o inizia una nuova chat"  v-model="search">
                 </div>
                 <div class="chat-list-container">
-                    <div class="chat-list" v-for="(contact, index) in contacts"  @click="selectContact(index)">
+                    <div class="chat-list" v-for="(contact, index) in filteredList"  @click="selectContact(index)">
                         <div class="person">
                             <img class="user-image" :src=" `img/avatar${contact.avatar}.jpg`" alt="">
                             <div class="name-person">
@@ -98,7 +98,7 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <form class="message-input" @submit.prevent="addNewMessage()">
-                        <input type="text" id="input-text" placeholder="Scrivi un messaggio" v-model="newMessage.message">
+                        <input type="text" value="" id="input-text" placeholder="Scrivi un messaggio" v-model="newMessage.message">
                     </form>
                     <div class="microphone">
                         <div class="icon-microphone">

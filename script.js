@@ -2,6 +2,7 @@ const app= new Vue({
     el: "#app",
     data:{
         activeContact:0,
+        search: '',
         contacts: [
         {
             name: 'Michele',
@@ -176,24 +177,28 @@ const app= new Vue({
         },
     },
 
+    computed: {
+        filteredList() {
+          return this.contacts.filter(contact => {
+            return contact.name.toLowerCase().includes(this.search.toLowerCase())
+          })
+        }
+      },
+
     methods:{
         selectContact(index){
             this.activeContact=index;
         },
 
         addNewMessage(){
-        if(this.newMessage !== ' '){
+        if(this.newMessage !== ''){
             this.contacts[this.activeContact].messages.push(this.newMessage);
-            this.newMessage = ' ',
+            this.newMessage = '',
             setTimeout(this.botNewMessage,2000)
         }
         },
         botNewMessage(){
             this.contacts[this.activeContact].messages.push(this.botMessage)
-        }
-        
-   
-    
-
+        },
     },
 });
