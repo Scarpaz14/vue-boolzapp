@@ -84,7 +84,7 @@
                     <!-- /icone header destro  -->
                 </div>
                 <div class="container-message">
-                    <div class="container-row" v-for="(contact,index) in contacts[activeContact].messages" :class="{'sent-message': contact.status == 'sent', 'received-message': contact.status == 'received'}">
+                    <div class="container-row" v-for="(contact,index) in contacts[activeContact].messages" :class="contact.status === 'sent' ? 'sent-message' : 'received-message'">
                         <div class="text">{{contact.message }}</div> 
                         <div class="time-send">
                             <small>16:15</small>
