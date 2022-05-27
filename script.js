@@ -165,11 +165,7 @@ const app= new Vue({
                 }
             ],
         },],
-        newMessage:{
-            date: '10/01/2020 15:30:55',
-            message: '',
-            status: 'sent'
-        },
+        newMessage: "",
         botMessage:{
             date: '10/01/2020 15:30:55',
             message: 'ok capo',
@@ -191,14 +187,28 @@ const app= new Vue({
         },
 
         addNewMessage(){
-        if(this.newMessage !== ''){
-            this.contacts[this.activeContact].messages.push(this.newMessage);
-            this.newMessage = '',
-            setTimeout(this.botNewMessage,2000)
-        }
+            const newMessage ={
+            date: '10/01/2020 15:30:55',
+            message: this.newMessage,
+            status: 'sent' 
+            }
+            if(this.newMessage !== ""){
+            this.contacts[this.activeContact].messages.push(newMessage);
+            this.newMessage = "",
+            this.botNewMessage(this.contacts[this.activeContact]);
+            }
+        
         },
-        botNewMessage(){
-            this.contacts[this.activeContact].messages.push(this.botMessage)
+        botNewMessage(index){
+           setTimeout(()=>{
+                const newMessage ={
+                    date: '10/01/2020 15:30:55',
+                    message: "ok",
+                    status: 'received' 
+                    };
+                    index.messages.push(newMessage);
+            
+            },2000);
         },
     },
 });
