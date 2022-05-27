@@ -174,24 +174,29 @@ const app= new Vue({
     },
 
     computed: {
+        // funzione per filtrare la ricerca del nome 
         filteredList() {
           return this.contacts.filter(contact => {
             return contact.name.toLowerCase().includes(this.search.toLowerCase())
           })
-        }
+        },
       },
 
     methods:{
+        // funzione per selezionare il contatto con cui chattare
+        // selezioniamo l'indice di ogni contatto
         selectContact(index){
             this.activeContact=index;
         },
-
+        // funzione per invio di nuovi messaggi 
         addNewMessage(){
+            // creiamo un nuovo oggetto per i messaggi che scriveremo 
             const newMessage ={
             date: '10/01/2020 15:30:55',
             message: this.newMessage,
             status: 'sent' 
             }
+            // pushamo il nuovo oggetto dentro l'array "messages" 
             if(this.newMessage !== ""){
             this.contacts[this.activeContact].messages.push(newMessage);
             this.newMessage = "",
